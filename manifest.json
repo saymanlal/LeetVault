@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "LeetVault",
+  "version": "1.0.0",
+  "description": "Professional LeetCode problem manager with code snippets, search, edit and delete",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "Open LeetVault"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["db.js", "ui.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "commands": {
+    "toggle-overlay": {
+      "suggested_key": {
+        "default": "Alt+Shift+L",
+        "mac": "Alt+Shift+L"
+      },
+      "description": "Toggle LeetVault overlay"
+    }
+  }
+}

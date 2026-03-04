@@ -1,0 +1,35 @@
+# System files
+.DS_Store
+Thumbs.db
+*~
+._*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Browser extension files
+*.crx
+*.pem
+*.zip
+
+# OS files
+desktop.ini
+ehthumbs.db
+
+# Node modules (if you add any dependencies)
+node_modules/
+package-lock.json
+
+# Build files
+dist/
+build/
+
